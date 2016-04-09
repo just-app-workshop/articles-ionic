@@ -14,6 +14,10 @@
 			path: 'popover-menu',
 			icon: 'ion-ios-arrow-down'
 		}, {
+			title: 'Articles',
+			path: 'articles',
+			icon: 'ion-ios-paper-outline'
+		}, {
 			title: 'Elements',
 			path: 'elements',
 			icon: 'ion-android-checkbox-outline'
