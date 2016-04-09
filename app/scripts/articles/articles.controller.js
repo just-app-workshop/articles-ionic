@@ -21,9 +21,10 @@
 			vm.articles = data;
 		});
 
-    function navigate() {
-      $state.go('app.article');
-    }
+		function navigate(articleId) {
+			$state.go('app.article', { articleId: articleId });
+		}
+
 
 	}
 

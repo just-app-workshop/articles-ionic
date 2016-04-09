@@ -37,10 +37,16 @@
 					callback(result);
 				});
 		}
-
 		function get(articleId) {
-			var result = {}
-			return result;
+			// we take an article from cache but we can request ir from the server
+			for (var i = 0; i < result.length; i++) {
+				if (result[i].id === articleId) {
+					return $q.when(result[i]);
+				}
+			}
+			return $q.when(null);
 		}
+
+
 	}
 })();
