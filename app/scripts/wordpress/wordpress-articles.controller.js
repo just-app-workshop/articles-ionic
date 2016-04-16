@@ -15,16 +15,23 @@
 			navigate: navigate
 		});
 
+		function activate() {
+			getArticles();
+		}
+		activate();
+
 		// ********************************************************************
 
-		wordpressService.all(function(data){
-			vm.articles = data;
-		});
-
-		function navigate(articleId) {
-			$state.go('app.article', { articleId: articleId });
+		function getArticles() {
+			wordpressService.getArticles()
+				.then(function(articles) {
+					vm.articles = articles;
+				});
 		}
 
+		function navigate(articleId) {
+			$state.go('app.wordpress-article', { articleId: articleId });
+		}
 
 	}
 
