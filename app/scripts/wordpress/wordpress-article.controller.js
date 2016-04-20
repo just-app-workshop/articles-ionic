@@ -5,7 +5,7 @@
 		.module('supermodular.wordpress')
 		.controller('WordpressArticleController', WordpressArticleController);
 
-	ArticleController.$inject = ['$stateParams', 'wordpressService'];
+	WordpressArticleController.$inject = ['$stateParams', 'wordpressService'];
 
 	/* @ngInject */
 	function WordpressArticleController($stateParams, wordpressService) {
@@ -17,7 +17,7 @@
 
 		var articleId = parseInt($stateParams.articleId);
 
-		wordpressService.get(articleId)
+		wordpressService.getArticle(articleId)
 			.then(function(article) {
 				vm.article = article;
 			});
