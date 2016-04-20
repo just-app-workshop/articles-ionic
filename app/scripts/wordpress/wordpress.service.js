@@ -57,6 +57,12 @@
 
 
 				function getArticle(articleId) {
+					// TODO: Change the implementation and fetch the requeste article by using
+					//       an HTTP reques
+					//
+					//       eg:
+					//       http://demo.titaniumtemplates.com/wordpress/?p=38&json=1
+					//       `p=38` where 38 is the `id` of the article
 					if (articles.length) {
 						return $q.when(_.find(articles, 'id', articleId));
 					} else {
