@@ -15,7 +15,7 @@
 
 		var service = {
 			getArticles: getArticles,
-			get: get
+			getArticle: getArticle
 		};
 		return service;
 
@@ -56,10 +56,20 @@
 
 
 
-		function get(articleId) {
-			var article = {};
-			return article;
-		}
+				function getArticle(articleId) {
+					if (articles.length) {
+						return $q.when(_.find(articles, 'id', articleId));
+					} else {
+						var deferred = $q.defer();
+
+						getArticles()
+							.then(function() {
+								deferred.resolve(_.find(articles, 'id', articleId));
+							});
+
+						return deferred.promise;
+					}
+				}
 
 
 	}
