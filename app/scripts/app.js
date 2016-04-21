@@ -19,7 +19,7 @@ angular.module('starter', [
 	'supermodular.native-scrolling',
 	'supermodular.new-slide-box',
 	'supermodular.articles',
-	"supermodular.wordpress",
+	'supermodular.wordpress',
 	'gMaps',
 	'ngCordova'
 ])
