@@ -42,7 +42,7 @@
 			return articles;
 		}
 		
-		function getArticles(articleId) {
+		function getArticles() {
 			return $http.get(url)
 			.then(function(response) {
 				articles = [];				
