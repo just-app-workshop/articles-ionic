@@ -17,6 +17,10 @@
 			title: 'Articles',
 			path: 'articles',
 			icon: 'ion-ios-paper-outline'
+		},{
+			title: 'Wordpress',
+			path: 'wordpress-articles',
+			icon: 'ion-ios-paper-outline'
 		}, {
 			title: 'Elements',
 			path: 'elements',

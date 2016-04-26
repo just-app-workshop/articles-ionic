@@ -33,9 +33,9 @@ ionic state restore
 :: Add target platform
 ::
 :: Comment out the platform(s) your system supports
-::
-grunt platform:add:ios
-:: grunt platform:add:android
+::grunt platform:add:ios
+:: 
+grunt platform:add:android
 
 ::
 :: Build the  project and generate the cordova directory (www)
